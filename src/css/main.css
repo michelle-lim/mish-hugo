@@ -1,1 +1,7 @@
-@import url("/imports/reset.css");
+.test {
+  font-family: "Playfair Display", serif;
+  color: blue; }
+
+.subtest {
+  font-family: "Cutive Mono", monospace;
+  color: red; }

@@ -1,6 +1,7 @@
 import gulp from "gulp";
 import cp from "child_process";
 import gutil from "gulp-util";
+import sass from "gulp-sass";
 import postcss from "gulp-postcss";
 import cssImport from "postcss-import";
 import cssnext from "postcss-cssnext";
@@ -15,8 +16,16 @@ const defaultArgs = ["-d", "../dist", "-s", "site", "-v"];
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
 
-gulp.task("build", ["css", "js", "hugo"]);
-gulp.task("build-preview", ["css", "js", "hugo-preview"]);
+gulp.task("build", ["sass", "css", "js", "hugo"]);
+gulp.task("build-preview", ["sass", "css", "js", "hugo-preview"]);
+
+gulp.task("sass", () => {
+  gulp.src("./src/scss/main.scss")
+    .pipe(sass({style:'expanded'}))
+    .on('error', function(err) {console.log(err.message);})
+    .pipe(gulp.dest('./src/css'))
+    .pipe(browserSync.stream())
+});
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -39,7 +48,7 @@ gulp.task("js", (cb) => {
   });
 });
 
-gulp.task("server", ["hugo", "css", "js"], () => {
+gulp.task("server", ["hugo", "sass", "css", "js"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -47,6 +56,8 @@ gulp.task("server", ["hugo", "css", "js"], () => {
   });
   gulp.watch("./src/js/**/*.js", ["js"]);
   gulp.watch("./src/css/**/*.css", ["css"]);
+  gulp.watch("./src/scss/**/*.scss",["sass"]);
+  gulp.watch("./src/scss/*.scss", ["sass"]);
   gulp.watch("./site/**/*", ["hugo"]);
 });
 

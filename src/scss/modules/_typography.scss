@@ -1,0 +1,15 @@
+$serifFont: 'Playfair Display', serif;
+$monospaceFont: 'Cutive Mono', monospace;
+
+$testColor: blue;
+$testColor2: red;
+
+.test{
+  font-family: $serifFont;
+  color: $testColor;
+}
+
+.subtest {
+  font-family: $monospaceFont;
+  color: $testColor2;
+}
