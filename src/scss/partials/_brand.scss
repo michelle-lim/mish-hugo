@@ -1,2 +1,33 @@
 // Brand Partial
 
+.ml-fullscreen {
+  height: calc(100vh - 68px);
+}
+
+.ml-text-box {
+  background-color: $mlPinkTransparent;
+}
+
+.ml-offset-type {
+  text-align: center;
+}
+
+.ml-text-box {
+  padding-top: $innerPadding;
+  padding-bottom: $innerPadding;
+}
+
+@media screen and ( min-width: 1024px ) {
+  #hero {
+    transform: translateX(-50px) translateY(30%);
+  }
+}
+
+
+#landing .ml-illustr {
+  background-image: url('/images/flower.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  opacity: 0.5;
+}

@@ -3,6 +3,8 @@
 // Modules
 @import "modules/colors";
 @import "modules/typography";
+@import "modules/spacing";
 
 // Partials
-@import "partials/brand.scss";
+@import "partials/brand";
+@import "partials/navigation";

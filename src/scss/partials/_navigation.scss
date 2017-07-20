@@ -1,0 +1,40 @@
+// Navigation Layout
+
+.pure-menu-item {
+  font-family: $serifFont;
+}
+
+.pure-menu-horizontal {
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid $mlLightGray;
+}
+
+// Hover Effect
+.pure-menu-link {
+  transition: color 0.3s ease-in;
+}
+
+.pure-menu-link:hover {
+  background-color: $mlWhite;
+  color: $mlMediumGray;
+  transition: color 0.3s ease-out;
+}
+
+.pure-menu-link:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  bottom: 6%;
+  left: 25%;
+  background-color: $mlPinkTransparent;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.pure-menu-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}

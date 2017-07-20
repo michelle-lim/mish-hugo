@@ -5,3 +5,70 @@
 .subtest {
   font-family: "Cutive Mono", monospace;
   color: red; }
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: -3.5%;
+  color: #4B4B4B; }
+
+p {
+  font-family: "Cutive Mono", monospace;
+  color: #4B4B4B; }
+
+.ml-fullscreen {
+  height: calc(100vh - 68px); }
+
+.ml-text-box {
+  background-color: rgba(255, 217, 217, 0.33); }
+
+.ml-offset-type {
+  text-align: center; }
+
+.ml-text-box {
+  padding-top: 5%;
+  padding-bottom: 5%; }
+
+@media screen and (min-width: 1024px) {
+  #hero {
+    transform: translateX(-50px) translateY(30%); } }
+
+#landing .ml-illustr {
+  background-image: url("/images/flower.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+  opacity: 0.5; }
+
+.pure-menu-item {
+  font-family: "Playfair Display", serif; }
+
+.pure-menu-horizontal {
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #F7F7F7; }
+
+.pure-menu-link {
+  transition: color 0.3s ease-in; }
+
+.pure-menu-link:hover {
+  background-color: #FFFFFF;
+  color: #4B4B4B;
+  transition: color 0.3s ease-out; }
+
+.pure-menu-link:before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  bottom: 6%;
+  left: 25%;
+  background-color: rgba(255, 217, 217, 0.33);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s; }
+
+.pure-menu-link:hover:before {
+  visibility: visible;
+  transform: scaleX(1); }
