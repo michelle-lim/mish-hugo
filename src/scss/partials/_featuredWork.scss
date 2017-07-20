@@ -1,0 +1,64 @@
+// Work Section Styles
+
+.ml-featured-img {
+  height: 550px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ml-tech-stack-icons {
+  font-size: 21pt;
+  color: $mlMediumGraySemiTransparent;
+}
+
+#project-1 .ml-featured-img {
+  background-image: url('/images/p1-featured.jpg');
+}
+
+#project-2 .ml-featured-img {
+  background-image: url('/images/p2-featured.jpg');
+}
+
+#project-3 .ml-featured-img {
+  background-image: url('/images/p3-featured.jpeg');
+}
+
+#project-1, 
+#project-2, 
+#project-3 {
+  h1 {
+    margin-bottom: -5%;
+  }
+  .ml-text-box {
+
+    p {
+      padding: 0 50px;
+      line-height: 1.5em;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 45px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 45px);
+        background-color: white;
+        z-index: -1;
+        opacity: 0.75;
+      }
+    }
+
+    
+  }
+}
+
+@media screen and ( min-width: 1024px ) {
+  #project-3 .ml-offset-type,
+  #project-1 .ml-offset-type {
+    transform: translateX(-40px);
+  }
+  #project-2 .ml-offset-type {
+    transform: translateX(40px);
+  }
+}

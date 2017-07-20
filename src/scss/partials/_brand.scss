@@ -2,6 +2,27 @@
 
 .ml-fullscreen {
   height: calc(100vh - 68px);
+  padding-bottom: 100px;
+}
+
+.ml-details-button {
+  float: right;
+  background-color: $mlWhite;
+  color: $mlMediumGray;
+  border: 0.5px solid $mlGray;
+  font-family: $serifFont;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 10px 30px 12px;
+  margin-top: -15px;
+  margin-right: 50px;
+  box-shadow: 5px 5px 0 $mlMediumGrayTransparent;
+
+  &.left-align {
+    float: left;
+    margin-left: 50px;
+    margin-right: auto;
+  }
 }
 
 .ml-text-box {
@@ -21,13 +42,83 @@
   #hero {
     transform: translateX(-50px) translateY(30%);
   }
+
+  #branch-left {
+    
+  }
 }
 
-
+// Hero
 #landing .ml-illustr {
   background-image: url('/images/flower.jpg');
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center right;
   opacity: 0.5;
+}
+
+
+
+
+// Contact 
+#contact {
+  text-align: center;
+  padding-bottom: 0;
+
+  position: relative;
+
+  width: 100%;
+  background-image: url('/images/contact-bg-01.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 1;
+  
+  #submit-wrapper {
+    padding-bottom: 50px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  h1 {
+    padding-top: 150px;
+    margin: auto auto -1.25% auto;
+  }
+
+  .ml-text-box {
+    width: 100%;
+    z-index: -1;
+  }
+
+  .ml-details-button {
+    float: none;
+    margin: -10px auto auto auto;
+  }
+
+  .pure-form input {
+    width: 80%;
+    margin: 0 auto 30px;
+    background-color: $mlTransparent;
+    border: none;
+    border-bottom: 1px solid $mlMediumGraySemiTransparent;
+    border-radius: 0;
+    box-shadow: none;
+    height: 50px;
+
+    &::placeholder-shown,
+    &::placeholder {
+      font-family: $monospaceFont;
+      padding-left: 0;
+    }
+  }
+}
+
+
+// Social Footer
+#social-footer {
+  position: absolute;
+  bottom: -50px;
+  right: 50px;
 }
