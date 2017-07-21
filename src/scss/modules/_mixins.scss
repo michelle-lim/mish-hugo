@@ -1,0 +1,23 @@
+// Mixins
+
+// Background Images
+@mixin mlBgImg ($bgImg, $hAlign: center) {
+  overflow: hidden; 
+  background-image: url($bgImg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center $hAlign;
+}
+
+// Button Styles
+@mixin mlBtn () {
+  padding: 10px 30px 12px;
+  margin: -15px auto auto auto;
+  color: $mlMediumGray;
+  background-color: $mlWhite;
+  font-family: $serifFont;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 0.5px solid $mlGray;
+  box-shadow: 5px 5px 0 $mlMediumGrayTransparent; 
+}

@@ -1,124 +1,126 @@
 // Brand Partial
 
-.ml-fullscreen {
-  height: calc(100vh - 68px);
-  padding-bottom: 100px;
+// Illustration Sources
+$landingIllustr: '/images/hero-bg-01.png';
+$contactIllustr: '/images/contact-bg-01.png';
+
+// Illustration Placement
+#landing { 
+  @include mlBgImg($landingIllustr, left);
+  height: 600px;
 }
 
-.ml-details-button {
-  float: right;
-  background-color: $mlWhite;
-  color: $mlMediumGray;
-  border: 0.5px solid $mlGray;
-  font-family: $serifFont;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 10px 30px 12px;
-  margin-top: -15px;
-  margin-right: 50px;
-  box-shadow: 5px 5px 0 $mlMediumGrayTransparent;
+#contact {
+  @include mlBgImg($contactIllustr);
+}
 
-  &.left-align {
+// Buttons
+.ml-details-button {
+  @include mlBtn();
+}
+
+// Button Media Queries
+@media screen and ( min-width: $mlScreenLg ) {
+  .ml-left-btn {
     float: left;
-    margin-left: 50px;
-    margin-right: auto;
+    margin-left: $mlWhiteSpace;
   }
+  .ml-right-btn {
+    float: right;
+    margin-right: $mlWhiteSpace;
+  }
+}
+
+
+// Textboxes
+.ml-text-box-wrap {
+  text-align: center;
 }
 
 .ml-text-box {
   background-color: $mlPinkTransparent;
-}
+  padding-top: $mlWhiteSpace;
+  padding-bottom: $mlWhiteSpace;
+  margin: 10px;
 
-.ml-offset-type {
-  text-align: center;
-}
-
-.ml-text-box {
-  padding-top: $innerPadding;
-  padding-bottom: $innerPadding;
-}
-
-@media screen and ( min-width: 1024px ) {
-  #hero {
-    transform: translateX(-50px) translateY(30%);
-  }
-
-  #branch-left {
-    
-  }
-}
-
-// Hero
-#landing .ml-illustr {
-  background-image: url('/images/flower.jpg');
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-position: center right;
-  opacity: 0.5;
-}
-
-
-
-
-// Contact 
-#contact {
-  text-align: center;
-  padding-bottom: 0;
-
-  position: relative;
-
-  width: 100%;
-  background-image: url('/images/contact-bg-01.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  opacity: 1;
-  
-  #submit-wrapper {
-    padding-bottom: 50px;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-
-  h1 {
-    padding-top: 150px;
-    margin: auto auto -1.25% auto;
-  }
-
-  .ml-text-box {
-    width: 100%;
-    z-index: -1;
-  }
-
-  .ml-details-button {
-    float: none;
-    margin: -10px auto auto auto;
-  }
-
-  .pure-form input {
+  p {
     width: 80%;
-    margin: 0 auto 30px;
-    background-color: $mlTransparent;
-    border: none;
-    border-bottom: 1px solid $mlMediumGraySemiTransparent;
-    border-radius: 0;
-    box-shadow: none;
-    height: 50px;
+    margin: 0 auto;
+  }
+}
 
-    &::placeholder-shown,
-    &::placeholder {
-      font-family: $monospaceFont;
-      padding-left: 0;
+// Hero Textbox Styles
+#hero {
+  transform: translateY(10%);
+
+  .ml-text-box:before {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 45px);
+    background-color: white;
+    z-index: -1;
+    opacity: 0.75;
+  }
+}
+
+@media screen and ( min-width: 321px ) {
+  #hero {
+    transform: translateY(20%);
+  }
+}
+
+// Hero Textbox Transforms
+@media screen and ( min-width: $mlScreenMd ) {
+  #hero {
+    transform: translateX(100px) translateY(30%);
+
+    .ml-text-box {
+      margin: 0;
     }
   }
 }
 
+// Contact Form Styles
+#contact .pure-form input {
+  width: 80%;
+  margin: 0 auto 30px;
+  background-color: $mlTransparent;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $mlMediumGraySemiTransparent;
+  box-shadow: none;
+  height: 50px;
+
+  &::placeholder-shown,
+  &::placeholder {
+    font-family: $monospaceFont;
+    padding-left: 0;
+  }
+}
+
+@media ( min-width: $mlScreenMd ) {
+  #contact .pure-form input {
+    width: 33%;
+  }
+}
 
 // Social Footer
+#contact { 
+  position: relative;
+  margin-bottom: 0;
+}
+
 #social-footer {
   position: absolute;
-  bottom: -50px;
-  right: 50px;
+  bottom: 0px;
+  right: 10px;
+}
+
+@media ( min-width: $mlScreenLg ) {
+  #social-footer {
+    right: $mlWhiteSpace;
+  }
 }

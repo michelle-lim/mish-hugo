@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Michele Lim Portfolio</title>
 
 
@@ -32,9 +34,8 @@
   <nav id="navigation">
     <div class="pure-menu pure-menu-horizontal">
       <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Home</a></li>
         <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Work</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
         <li class="pure-menu-item"><a href="#" class="pure-menu-link">Blog</a></li>
       </ul>
   </div>
@@ -42,37 +43,29 @@
 
   <!-- Landing Section -->
   <div id="landing" class="pure-g ml-fullscreen">
-    <div class="pure-u-1 pure-u-lg-9-24 ml-illustr">
-      <!-- Empty div for flower background image -->
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-10-24">
-      <div id="hero" class="ml-offset-type">
+    <div class="pure-u-1 pure-u-md-14-24 pure-u-lg-10-24 center-col">
+      <div id="hero" class="ml-text-box-wrap">
         <!-- Hero Box -->
         <h1>Michelle Lim</h1>
         <div class="ml-text-box">
-          <p>Hi! I love web development &amp; design.</p>
-          <p>My background is in Computer Science.</p>
+          <p>
+            Hi! I love web development &amp; design.
+            My background is in Computer Science.
+          </p>
           <br>
-          <p>My favorite work is featured below.</p>
-          <p>For more, peruse my blog, stalk me</p>
-          <p>on social media, or email me. Thanks!</p>
+          <p>My favorite work is featured below. For more, peruse my blog, stalk me on social media, or email me. Thanks!</p>
         </div>
       </div>
-    </div>
-
-    <div class="pure-u-1 pure-u-lg-5-24">
-    <!-- Extra -->
     </div>
   </div>
 
   <!-- Project 1 -->
-  <div id="project-1" class="pure-g ml-fullscreen">
+  <div id="project-1" class="pure-g ml-fullscreen ml-featured-work">
     <div class="pure-u-1 pure-u-lg-17-24 ml-featured-img">
     <!-- Image -->
     </div>
     <div class="pure-u-1 pure-u-lg-7-24">
-      <div class="ml-offset-type">
+      <div class="ml-text-box-wrap ">
         <h1>Project 1</h1>
         <div class="ml-text-box">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper convallis diam, et aliquam diam auctor eget. </p>
@@ -81,15 +74,15 @@
             <i class="icon ion-social-chrome"></i>
           </p>
         </div>
-        <button class="ml-details-button">Details</button>
+        <button class="ml-details-button ml-right-btn">Details</button>
       </div>
     </div>
   </div>
 
   <!-- Project 2 -->
-  <div id="project-2" class="pure-g ml-fullscreen">
+  <div id="project-2" class="pure-g ml-fullscreen ml-featured-work ml-mirror">
     <div class="pure-u-1 pure-u-lg-7-24">
-      <div class="ml-offset-type">
+      <div class="ml-text-box-wrap">
         <h1>Project 2</h1>
         <div class="ml-text-box">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper convallis diam, et aliquam diam auctor eget. </p>
@@ -98,7 +91,7 @@
             <i class="icon ion-social-chrome"></i>
           </p>
         </div>
-        <button class="ml-details-button left-align">Details</button>
+        <button class="ml-details-button ml-left-btn">Details</button>
       </div>
     </div>
     <div class="pure-u-1 pure-u-lg-17-24 ml-featured-img">
@@ -107,12 +100,12 @@
   </div>
 
   <!-- Project 3 -->
-  <div id="project-3" class="pure-g ml-fullscreen">
+  <div id="project-3" class="pure-g ml-fullscreen ml-featured-work">
     <div class="pure-u-1 pure-u-lg-17-24 ml-featured-img">
     <!-- Image -->
     </div>
     <div class="pure-u-1 pure-u-lg-7-24">
-      <div class="ml-offset-type">
+      <div class="ml-text-box-wrap">
         <h1>Project 3</h1>
         <div class="ml-text-box">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper convallis diam, et aliquam diam auctor eget. </p>
@@ -121,43 +114,44 @@
             <i class="icon ion-social-chrome"></i>
           </p>
         </div>
-        <button class="ml-details-button">Details</button>
+        <button class="ml-details-button ml-right-btn">Details</button>
       </div>
     </div>
   </div>
 
-  <!-- Contact Me & Footer -->
-  <div id="contact" class="ml-fullscreen">
+  <!-- Contact Me -->
+  <div id="contact" class="ml-fullscreen ml-text-box-wrap ml-p-btm-2x">
+
+    <!-- Contact Me: Header -->
     <div class="pure-g">
       <div class="pure-u-1">
-        <h1>Lets Get In Touch</h1>
+        <h1 class="ml-full-width-header">Let&#39;s Get In Touch</h1>
       </div>
-      <div class="ml-text-box">
-        <div id="branch-left" class="pure-u-1 pure-u-lg-1-3">
-          <!-- Empty -->
-        </div>
-        <div class="pure-u-1 pure-u-lg-1-3">
-          <!-- Form Data -->
+    </div>
+
+    <!-- Contact Me: Form -->
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <div class="ml-text-box">
           <form class="pure-form pure-form-stacked">
             <fieldset>
               <input id="email" type="email" placeholder="Email Address">
               <input id="name" type="text" placeholder="Your Name">
               <input id="message" type="text" placeholder="Message Body">
-          </fieldset>
-        </form>
-        </div>
-        <div class="pure-u-1 pure-u-lg-1-3">
-          <!-- Empty -->
+            </fieldset>
+          </form>
         </div>
       </div>
     </div>
 
-    <div id="submit-wrapper" class="pure-g">
+    <!-- Contact Me: Submit -->
+    <div class="pure-g ml-padding-btm">
       <div class="pure-u-1">
         <button type="submit" class="ml-details-button">Send</button>
       </div>
     </div>
 
+    <!-- Contact Me: Social -->
     <div class="pure-g">
       <div class="pure-u-1">
         <div id="social-footer">
@@ -169,6 +163,8 @@
           </p>
         </div>
       </div>
-  </div>
+    </div>
+  </div> <!-- End Contact Me -->
+
 </body>
 </html>

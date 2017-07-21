@@ -1,3 +1,60 @@
-// White Space Module
+// Spacing Module
 
+// Breakpoints: Based on Pure
+$mlScreenSm: 35.5em;
+$mlScreenMd: 48em;
+$mlScreenLg: 64em;
+$mlScreenXl: 80em;
+
+// Constants
 $innerPadding: 5%;
+$mlWhiteSpace: 50px;
+$mlLgWhiteSpace: 100px;
+
+// Utility
+.ml-p-top {
+  padding-top: $mlWhiteSpace;
+}
+.ml-p-top-2x {
+  padding-top: $mlLgWhiteSpace;
+}
+.ml-p-btm {
+  padding-bottom: $mlWhiteSpace;
+}
+.ml-p-btm-2x {
+  padding-bottom: $mlLgWhiteSpace;
+}
+.ml-m-top {
+  margin-top: $mlWhiteSpace;
+}
+.ml-m-btm {
+  margin-bottom: $mlWhiteSpace;
+}
+
+// Horizontal Alignment
+.center-col {
+  margin: 0 auto;
+}
+
+// Vertical Alignment
+.ml-fullscreen {
+  // No Full Screen on mobile devices
+}
+
+// Fullscreen for Desktop Only
+@media screen and ( min-width: $mlScreenLg ) {
+  .ml-fullscreen {
+    // height: calc(100vh - 68px);
+    margin-bottom: 100px;
+  }
+}
+
+// Mirror
+// Bug: 1008 - 1023px row doesn't reverse
+// Media query must be pixel specific
+@media ( max-width: 1023px ) {
+  .ml-mirror {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

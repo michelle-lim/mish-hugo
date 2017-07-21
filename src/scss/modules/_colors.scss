@@ -1,11 +1,17 @@
-// Color Module
+// Colors
 
-$mlTransparent: rgba(255,255,255,0);
+// Brand Colors
 $mlPink: #FFD9D9;
-$mlPinkTransparent: rgba(255, 217, 217, 0.33);
-$mlMediumGray: #4B4B4B;
-$mlMediumGraySemiTransparent: rgba(75,75,75, 0.75);
-$mlMediumGrayTransparent: rgba(75,75,75, 0.075);
+$mlPinkSolid: #FFF2F2;
 $mlGray: #bcbcbc;
+$mlMediumGray: #4B4B4B;
 $mlLightGray: #F7F7F7;
+
+// Transparent
+$mlPinkTransparent: rgba(255, 217, 217, 0.33);
+$mlMediumGraySemiTransparent: rgba(75,75,75, 0.6);
+$mlMediumGrayTransparent: rgba(75,75,75, 0.075);
+
+// Utility
 $mlWhite: #FFFFFF;
+$mlTransparent: rgba(255,255,255,0);

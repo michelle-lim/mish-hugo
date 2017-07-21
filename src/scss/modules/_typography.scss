@@ -3,28 +3,23 @@
 $serifFont: 'Playfair Display', serif;
 $monospaceFont: 'Cutive Mono', monospace;
 
-$testColor: blue;
-$testColor2: red;
-
-.test{
-  font-family: $serifFont;
-  color: $testColor;
-}
-
-.subtest {
-  font-family: $monospaceFont;
-  color: $testColor2;
-}
-
 h1 {
   font-family: $serifFont;
   font-size: 48px;
   font-weight: normal;
-  margin-bottom: -3.5%;
+  margin-bottom: -20px;
   color: $mlMediumGray;
+  
+}
+
+.ml-full-width-header {
+  padding-top: 150px;
+  margin: auto auto -1.25% auto;
+  z-index: 10;
 }
 
 p {
   font-family: $monospaceFont;
   color: $mlMediumGray;
+  line-height: 1.5em;
 }

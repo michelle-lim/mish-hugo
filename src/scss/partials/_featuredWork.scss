@@ -1,64 +1,124 @@
 // Work Section Styles
 
+// Featured Image Dummies
+$p1Img: '/images/p1-featured.jpg';
+$p2Img: '/images/p2-featured.jpg';
+$p3Img: '/images/p3-featured.jpeg';
+
+// Set Image Styles
 .ml-featured-img {
-  height: 550px;
+  height: 250px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
+.ml-mirror .ml-featured-img {
+  z-index: -1;
+}
+
+#project-1 .ml-featured-img {
+  background-image: url($p1Img);
+}
+
+#project-2 .ml-featured-img {
+  background-image: url($p2Img);
+}
+
+#project-3 .ml-featured-img {
+  background-image: url($p3Img);
+}
+
+// Icons
 .ml-tech-stack-icons {
   font-size: 21pt;
   color: $mlMediumGraySemiTransparent;
 }
 
-#project-1 .ml-featured-img {
-  background-image: url('/images/p1-featured.jpg');
-}
+// Small Phones & Default Styles
+.ml-featured-work .ml-text-box-wrap {
+  // Set Textbox Vertical Overlay
+  margin-top: -40%;
+  margin-bottom: 15%;
 
-#project-2 .ml-featured-img {
-  background-image: url('/images/p2-featured.jpg');
-}
-
-#project-3 .ml-featured-img {
-  background-image: url('/images/p3-featured.jpeg');
-}
-
-#project-1, 
-#project-2, 
-#project-3 {
   h1 {
-    margin-bottom: -5%;
+    margin-bottom: -1%;
+    color: $mlWhite;
   }
+
+  p {
+    padding: 0;
+    line-height: 1.5em;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
   .ml-text-box {
+    background-color: $mlPinkSolid;
+  }
+}
 
-    p {
-      padding: 0 50px;
-      line-height: 1.5em;
+// Large Phones
+@media screen and ( min-width: $mlScreenSm ) {
+  // Adjust Textbox Vertical Overlay
+  .ml-featured-work .ml-text-box-wrap {
+    margin-top: -20%;
+  }
+}
 
-      &:before {
-        content: "";
-        position: absolute;
-        top: 45px;
-        left: 0;
-        width: 100%;
-        height: calc(100% - 45px);
-        background-color: white;
-        z-index: -1;
-        opacity: 0.75;
-      }
+
+// Tablet
+@media screen and ( min-width: $mlScreenMd ) {
+  // Adjust Featured Image Height
+  .ml-featured-img {
+    height: 350px;
+  }
+
+  // Adjust Textbox Vertical Overlay
+  .ml-featured-work .ml-text-box-wrap {
+    margin-top: -15%;
+  }
+}
+
+// Desktop
+@media screen and ( min-width: $mlScreenLg ) {
+  // Adjust Featured Image Height
+  .ml-featured-img {
+    height: 550px; 
+  }
+
+  // Set Textbox Horizontal Overlay
+  .ml-featured-work .ml-text-box-wrap {
+    margin-top: 0; 
+  
+    h1 {
+      color: $mlMediumGray;
+      margin-bottom: -20px;
     }
 
-    
-  }
-}
+    .ml-text-box {
+      background-color: $mlPinkTransparent;
+      margin: 0;
+    }
 
-@media screen and ( min-width: 1024px ) {
-  #project-3 .ml-offset-type,
-  #project-1 .ml-offset-type {
-    transform: translateX(-40px);
+    p:before {
+      content: "";
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 45px);
+      background-color: white;
+      z-index: -1;
+      opacity: 0.75;
+    }
   }
-  #project-2 .ml-offset-type {
-    transform: translateX(40px);
+
+  .ml-featured-work .ml-text-box-wrap {
+    transform: translateX(-40px) translateY(25%);
+  }
+
+  .ml-featured-work.ml-mirror .ml-text-box-wrap {
+    transform: translateX(40px) translateY(25%);
   }
 }
