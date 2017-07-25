@@ -1,13 +1,14 @@
 // Brand Partial
 
 // Illustration Sources
-$landingIllustr: '/images/hero-bg-01.png';
-$contactIllustr: '/images/contact-bg-01.png';
+// $landingIllustr: '/images/hero-bg-01.png';
+$contactIllustr: '/images/bg.png';
 
 // Illustration Placement
 #landing { 
-  @include mlBgImg($landingIllustr, left);
-  height: 600px;
+  @include mlBgImg($contactIllustr, left);
+  min-height: 700px;
+  margin-bottom: $mlLgWhiteSpace;
 }
 
 #contact {
@@ -36,6 +37,12 @@ $contactIllustr: '/images/contact-bg-01.png';
 .ml-text-box-wrap {
   text-align: center;
 }
+.ml-pink-rectangle {
+  background-color: $mlPinkTransparent;
+  height: 5px;
+  width: 20%;
+  margin: 0 auto $mlLgWhiteSpace;
+}
 
 .ml-text-box {
   background-color: $mlPinkTransparent;
@@ -52,14 +59,15 @@ $contactIllustr: '/images/contact-bg-01.png';
 // Hero Textbox Styles
 #hero {
   transform: translateY(10%);
+  margin-bottom: 200px;
 
   .ml-text-box:before {
     content: "";
     position: absolute;
-    top: 45px;
+    top: 150px;
     left: 0;
     width: 100%;
-    height: calc(100% - 45px);
+    height: calc(100% - 150px);
     background-color: white;
     z-index: -1;
     opacity: 0.75;
@@ -68,14 +76,15 @@ $contactIllustr: '/images/contact-bg-01.png';
 
 @media screen and ( min-width: 321px ) {
   #hero {
-    transform: translateY(20%);
+    transform: translateY(10%);
+
   }
 }
 
 // Hero Textbox Transforms
 @media screen and ( min-width: $mlScreenMd ) {
   #hero {
-    transform: translateX(100px) translateY(30%);
+    transform: translateY(12.5%);
 
     .ml-text-box {
       margin: 0;
@@ -117,6 +126,16 @@ $contactIllustr: '/images/contact-bg-01.png';
   position: absolute;
   bottom: 0px;
   right: 10px;
+
+  a {
+    color: $mlMediumGraySemiTransparent;
+    transition: color 200ms ease-in;
+  }
+
+  a:hover {
+    color: $mlMediumGray;
+    transition: color 200ms ease-out;
+  }
 }
 
 @media ( min-width: $mlScreenLg ) {
@@ -124,3 +143,20 @@ $contactIllustr: '/images/contact-bg-01.png';
     right: $mlWhiteSpace;
   }
 }
+
+// Body 
+body {
+  scroll-behavior: smooth;
+  // background-image: url('/images/dots.jpg');
+  // background-attachment: fixed;
+}
+
+// Fade Animations
+// .ml-fade-in {
+//   visibility: hidden;
+// }
+// .ml-visible {
+//   visibility: visible;
+//   transition: opacity 1s ease-out;
+// }
+

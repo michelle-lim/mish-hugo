@@ -1,34 +1,45 @@
 // Work Section Styles
 
 // Featured Image Dummies
-$p1Img: '/images/p1-featured.jpg';
-$p2Img: '/images/p2-featured.jpg';
-$p3Img: '/images/p3-featured.jpeg';
+// $p1Img: '/images/p1-featured.jpg';
+// $p2Img: '/images/p2-featured.jpg';
+// $p3Img: '/images/p3-featured.jpeg';
 
 // Set Image Styles
 .ml-featured-img {
   height: 250px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
 }
 
 .ml-mirror .ml-featured-img {
   z-index: -1;
 }
 
-#project-1 .ml-featured-img {
-  background-image: url($p1Img);
+.ml-featured-img {
+  overflow: hidden;
+  // background-color: $mlMediumGray;
+  z-index: -2;
+
+  img {
+    // position: relative;
+    width: 100%;
+    filter: contrast(50%);
+    z-index: -1;
+    // transition: opacity 200ms ease-in;
+    // -webkit-backface-visibility: hidden;
+    // z-index: -1;
+  }
 }
 
-#project-2 .ml-featured-img {
-  background-image: url($p2Img);
+@media screen and ( min-width: $mlScreenLg ) {
+  .ml-featured-img img {
+    // opacity: 0.33;
+    // transition: opacity 200ms ease-out;
+    filter: contrast(100%);
+  }
 }
-
-#project-3 .ml-featured-img {
-  background-image: url($p3Img);
-}
-
 // Icons
 .ml-tech-stack-icons {
   font-size: 21pt;
@@ -110,7 +121,7 @@ $p3Img: '/images/p3-featured.jpeg';
       height: calc(100% - 45px);
       background-color: white;
       z-index: -1;
-      opacity: 0.75;
+      opacity: 0.5;
     }
   }
 

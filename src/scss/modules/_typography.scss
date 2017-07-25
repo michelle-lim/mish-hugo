@@ -2,12 +2,21 @@
 
 $serifFont: 'Playfair Display', serif;
 $monospaceFont: 'Cutive Mono', monospace;
+$secondaryFont: 'Source Serif Pro', serif;
+
 
 h1 {
   font-family: $serifFont;
   font-size: 48px;
   font-weight: normal;
   margin-bottom: -20px;
+  color: $mlMediumGray;
+  
+}
+h3 {
+  font-family: $serifFont;
+  font-size: 24px;
+  font-weight: normal;
   color: $mlMediumGray;
   
 }
@@ -18,8 +27,13 @@ h1 {
   z-index: 10;
 }
 
-p {
-  font-family: $monospaceFont;
+a {
   color: $mlMediumGray;
-  line-height: 1.5em;
+}
+
+p {
+  font-family: $secondaryFont;
+  color: $mlMediumGray;
+  line-height: 2em;
+  font-size: 1em;
 }

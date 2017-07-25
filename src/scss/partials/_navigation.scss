@@ -38,3 +38,23 @@
   visibility: visible;
   transform: scaleX(1);
 }
+
+// Headroom Styles
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+  // top: 0;
+
+  z-index: 1000;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
