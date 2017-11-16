@@ -1,6 +1,6 @@
 # Allow font assets to be used across domains and subdomains
-<FilesMatch "\.(ttf|otf|eot|woff)$">
+<FilesMatch "\.(ttf|eot|woff)$">
   <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Origin "http://d33wubrfki0l68.cloudfront.net"
   </IfModule>
 </FilesMatch>
